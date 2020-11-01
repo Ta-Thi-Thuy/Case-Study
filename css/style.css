@@ -1,0 +1,62 @@
+body {
+    background-image: url("../img/flash.gif");
+    background-size: cover;
+}
+
+h1 {
+    font-size: 80px;;
+    text-align: center;;
+    background-color: white;
+    color: #58257b;
+    text-shadow: 5px 5px violet;
+
+}
+
+button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px auto;
+    cursor: pointer;
+    font-size: 40px;
+    background-color: yellow;
+    color: black;
+    border-radius: 100px;
+}
+
+button:hover {
+    background-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+}
+
+button:active {
+    outline: none;
+    transform: translateX(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    color: red;
+}
+
+#styleTime {
+    background-color: aquamarine;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: yellow;
+    }
+}
+
+

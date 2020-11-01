@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI LÀ TRIỆU PHÚ</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="js/music.js"></script>
+</head>
+<div>
+    <h2 id="styleTime">
+        Thời gian còn lại:<span id="timeCountDown"></span>
+    </h2>
+</div>
+<div id='point'>
+    <h2 id="result"></h2>
+</div>
+<body>
+<div id="wrapper">
+    <div id="questionScreen" class="hide">
+        <div id="question">Câu hỏi</div>
+        <div id="answer">
+            <button id="answer_1" onclick="checkAnswer(this.id, this)">Câu trả lời 1</button>
+            <br>
+            <button id="answer_2" onclick="checkAnswer(this.id, this)">Câu trả lời 2</button>
+            <br>
+            <button id="answer_3" onclick="checkAnswer(this.id, this)">Câu trả lời 3</button>
+            <br>
+            <button id="answer_4" onclick="checkAnswer(this.id, this)">Câu trả lời 4</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/Questions.js"></script>
+<script>
+    document.getElementById('question').innerHTML = questions[0].content;
+</script>
+</body>
+</html>
