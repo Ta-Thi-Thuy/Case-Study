@@ -1,9 +1,9 @@
 class Question {
     constructor(content, answer, correctAnswer, money) {
+        this.content = content;
         this.answer = answer;
         this.correctAnswer = correctAnswer;
         this.money = money;
-        this.content = content;
     }
 
     checkAnswer(answer) {
@@ -72,18 +72,19 @@ function checkAnswer(id) {
     let answer = document.getElementById(id).innerHTML;
     let getQuestionId = document.getElementById('question');
     if (!confirm("Bạn chắc chắn phương án này chứ?")) {
-        return;
+        return true;
     }
     if (questions[index].checkAnswer(answer)) {
         alert('Chúc mừng bạn đã trả lời đúng, ring tiền ^^');
-        next(index);
-        index++;
-        document.getElementById('result').innerHTML = "Tiền thưởng: " + (questions[index].money);
-
-        if (index === 10) {
+        if (index === 9) {
             alert("Bạn thật xuất sắc, chúc mừng bạn đã vượt qua toàn bộ câu hỏi <3");
             timeCount = 1;
+            reload();
         }
+        next(index);
+        index++;
+        console.log(index);
+        document.getElementById('result').innerHTML = "Tiền thưởng: " + (questions[index].money);
         timeCount = 15;
     } else {
         alert('Sai mất rồi! chơi lại nào :)');
